@@ -1,196 +1,414 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francés con MSc. Lizette Martínez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clases de francés con Lizette Martinez O. Profesora graduada de la Universidad de Costa Rica con 19 años de experiencia.">
+    <title>Lizette Martinez | Profesora de Francés</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --blue: #173b70;
-  --red: #d93650;
-  --gold: #e5b85c;
-  --cream: #fffaf2;
-  --text: #26354b;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--cream);
-  color: var(--text);
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #263247;
+            background: #ffffff;
+            line-height: 1.7;
+        }
 
-header {
-  background: white;
-  padding: 15px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 3px 15px #00000012;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+        header {
+            background: #142d50;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  color: var(--blue);
-  font-size: 22px;
-}
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            color: #ffffff;
+        }
 
-.logo span { color: var(--red); }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
 
-nav {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+        nav a:hover {
+            color: #f2c66d;
+        }
 
-nav a {
-  text-decoration: none;
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: 600;
-  transition: .3s;
-}
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                linear-gradient(rgba(12, 34, 64, .78), rgba(12, 34, 64, .78)),
+                url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=85') center/cover;
+            color: white;
+        }
 
-nav a:hover { color: var(--red); }
+        .hero-content {
+            max-width: 800px;
+        }
 
-.hero {
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px;
-  color: white;
-  background:
-    linear-gradient(90deg, #102c50bb, #102c5045),
-    url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=85')
-    center 48% / cover;
-}
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(38px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
 
-.hero-content {
-  max-width: 850px;
-  animation: appear 1.5s ease;
-}
+        .hero h2 {
+            font-size: 23px;
+            font-weight: 400;
+            color: #f2d58d;
+            margin-bottom: 20px;
+        }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(36px, 6vw, 65px);
-  margin-bottom: 20px;
-}
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
 
-.hero h1 span { color: #ffda83; }
+        .btn {
+            display: inline-block;
+            background: #c63d4b;
+            color: white;
+            padding: 13px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: .3s;
+        }
 
-.hero p {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
+        .btn:hover {
+            background: #a92e3b;
+            transform: translateY(-3px);
+        }
 
-.btn {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: .3s;
-}
+        section {
+            padding: 75px 8%;
+        }
 
-.btn:hover {
-  background: var(--gold);
-  color: var(--blue);
-  transform: translateY(-4px);
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
 
-.experience {
-  background: linear-gradient(90deg, var(--blue), #315e99, var(--red));
-  color: white;
-  padding: 23px 10px;
-  text-align: center;
-  overflow: hidden;
-}
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #142d50;
+        }
 
-.experience p {
-  font-size: 16px;
-  font-weight: 600;
-  animation: slide 18s linear infinite;
-}
+        .section-title p {
+            color: #c63d4b;
+            margin-top: 8px;
+        }
 
-@keyframes slide {
-  0% { transform: translateX(70%); }
-  100% { transform: translateX(-70%); }
-}
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 45px;
+            align-items: center;
+        }
 
-section {
-  padding: 75px 8%;
-  scroll-margin-top: 85px;
-}
+        .about-image {
+            min-height: 360px;
+            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85') center/cover;
+            border-radius: 15px;
+        }
 
-.section-title {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  color: var(--blue);
-  margin-bottom: 15px;
-}
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 29px;
+            color: #142d50;
+            margin-bottom: 18px;
+        }
 
-.subtitle {
-  text-align: center;
-  color: #777;
-  margin-bottom: 45px;
-}
+        .about-text p {
+            margin-bottom: 15px;
+        }
 
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 45px;
-  align-items: center;
-}
+        .stats {
+            background: #f1f5fa;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
 
-.profile {
-  background: linear-gradient(145deg, #e7effc, #fff0e8);
-  padding: 40px 25px;
-  border-radius: 25px;
-  text-align: center;
-}
+        .stat h3 {
+            color: #c63d4b;
+            font-size: 42px;
+            font-weight: 600;
+        }
 
-.profile .avatar {
-  font-size: 95px;
-  margin-bottom: 15px;
-}
+        .stat p {
+            color: #142d50;
+            font-weight: 500;
+        }
 
-.profile h3 {
-  color: var(--blue);
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-}
+        .services {
+            background: #ffffff;
+        }
 
-.about-text {
-  line-height: 2;
-  font-size: 15px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-.about-text h3 {
-  color: var(--red);
-  margin-bottom: 15px;
-  font-size: 23px;
-}
+        .card {
+            padding: 32px 25px;
+            border-radius: 12px;
+            background: #f7f9fc;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+            transition: .3s;
+        }
 
-.credentials {
-  margin-top: 20px;
-  padding-left: 20px;
-}
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #142d50;
+            margin-bottom: 12px;
+        }
+
+        .quote {
+            background: #142d50;
+            color: white;
+            text-align: center;
+            padding: 75px 12%;
+        }
+
+        .quote h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .quote p {
+            font-size: 18px;
+            color: #f2d58d;
+        }
+
+        .contact {
+            text-align: center;
+            background: #f1f5fa;
+        }
+
+        .contact p {
+            margin: 15px 0 25px;
+        }
+
+        footer {
+            background: #0c1d35;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .stats, .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Lizette Martinez</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Clases</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Bonjour et bienvenue!</h1>
+        <h2>Aprender francés abre las puertas del mundo</h2>
+        <p>
+            Soy Lizette Martinez O., profesora de francés,
+            apasionada por la enseñanza y por compartir
+            la belleza del idioma y la cultura francófona.
+        </p>
+        <a href="#contacto" class="btn">Conoce mis clases</a>
+    </div>
+</section>
+
+<section id="sobre-mi">
+    <div class="section-title">
+        <h2>Sobre mí</h2>
+        <p>Experiencia, pasión y compromiso con la educación</p>
+    </div>
+
+    <div class="about">
+        <div class="about-image"></div>
+
+        <div class="about-text">
+            <h3>¡Hola! Soy Lizette Martinez O.</h3>
+
+            <p>
+                Soy profesora de francés, graduada de la
+                <strong>Universidad de Costa Rica</strong>,
+                con 19 años de experiencia en el campo educativo.
+            </p>
+
+            <p>
+                A mis 41 años, continúo disfrutando de la
+                enseñanza y de la oportunidad de ayudar a
+                otras personas a descubrir un nuevo idioma.
+            </p>
+
+            <p>
+                Mi compromiso es ofrecer una experiencia de
+                aprendizaje enriquecedora, dinámica y motivadora,
+                adaptada a las necesidades de cada estudiante.
+            </p>
+
+            <p>
+                Creo que aprender francés no solamente significa
+                estudiar un idioma, sino también descubrir nuevas
+                culturas, oportunidades y formas de ver el mundo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <h3>19</h3>
+        <p>Años de experiencia</p>
+    </div>
+
+    <div class="stat">
+        <h3>UCR</h3>
+        <p>Formación universitaria</p>
+    </div>
+
+    <div class="stat">
+        <h3>41</h3>
+        <p>Años de vida</p>
+    </div>
+</section>
+
+<section class="services" id="servicios">
+    <div class="section-title">
+        <h2>Mis clases de francés</h2>
+        <p>El francés a tu alcance</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Gramática y vocabulario</h3>
+            <p>
+                Aprende las bases del idioma francés y
+                desarrolla tus conocimientos paso a paso.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🗣️</div>
+            <h3>Conversación</h3>
+            <p>
+                Desarrolla tu expresión oral, pronunciación
+                y confianza para comunicarte en francés.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌍</div>
+            <h3>Cultura francófona</h3>
+            <p>
+                Descubre las tradiciones, costumbres y
+                riqueza cultural de los países francófonos.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="quote">
+    <h2>« Une langue différente est une vision différente de la vie. »</h2>
+    <p>Un idioma diferente es una visión diferente de la vida.</p>
+</section>
+
+<section class="contact" id="contacto">
+    <div class="section-title">
+        <h2>¡Comencemos a aprender francés!</h2>
+        <p>Será un placer acompañarte en este camino.</p>
+    </div>
+
+    <p>
+        Si deseas conocer más sobre mis clases de francés,
+        puedes ponerte en contacto conmigo.
+    </p>
+
+    <a href="mailto:TU_CORREO@ejemplo.com" class="btn">
+        Escríbeme
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Lizette Martinez O. | Profesora de Francés</p>
+    <p>La pasión por enseñar, el arte de aprender.</p>
+</footer>
+
+</body>
+</html>
